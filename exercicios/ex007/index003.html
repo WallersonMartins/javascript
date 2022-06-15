@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portugues</title>
+</head>
+<body>
+    nome do pais: <input type="text" name="pais" id="pais" >
+    <button name="verificar" id="verificar" onclick="local()">Verificar</button>
+    <div id="resposta"></div>
+
+    <script>
+        function local() {
+            var pais = document.querySelector('input#pais')
+            var verificar = document.querySelector('button#verificar')
+            var resposta = document.querySelector('div#resposta')
+            var txt = String(pais.value)
+
+            if(txt.value == 'Brasil') {
+                resposta.innerHTML += 'Brasileiro'
+            } else {
+                resposta.innerHTML = 'china'
+            }
+        }
+    </script>
+</body>
+</html>
