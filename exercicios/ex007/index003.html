@@ -7,23 +7,19 @@
     <title>Portugues</title>
 </head>
 <body>
-    nome do pais: <input type="text" name="pais" id="pais" >
-    <button name="verificar" id="verificar" onclick="local()">Verificar</button>
-    <div id="resposta"></div>
+    <p>Nome do pais: <input type="text" name="pais" id="pais"></p>
+    <input type="button" value="verify" id="verify">
+    <div id="resp">   sadsad</div>
 
     <script>
-        function local() {
-            var pais = document.querySelector('input#pais')
-            var verificar = document.querySelector('button#verificar')
-            var resposta = document.querySelector('div#resposta')
-            var txt = String(pais.value)
-
-            if(txt.value == 'Brasil') {
-                resposta.innerHTML += 'Brasileiro'
+        let pais = document.querySelector('input#pais')
+        let verify = document.querySelector('input#verify')
+        let res = document.querySelector('div#resp')
+            if(pais.value == 'Brasil') {
+                res.innerText = `Voce é Brasileiro`
             } else {
-                resposta.innerHTML = 'china'
+                res.innerText - `Voce é Gringo`
             }
-        }
     </script>
 </body>
 </html>

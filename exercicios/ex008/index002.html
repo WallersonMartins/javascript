@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>IBGE - Nacionalidade</h1>
+    pais de nascimento: <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="calcular()">  
+    <div id="res">
+
+    <script>
+        function calcular() {
+            var pais = document.querySelector('input#pais').value;
+            var res = document.querySelector('div#res')
+            res.innerHTML = `Seu Pais é ${pais} <br>`
+            if(pais == 'Brasil') {
+                res.innerHTML += 'Voce é Brasileiro'
+            } else {
+                res.innerHTML += 'Voce é Gringo'
+            }
+        }
+            
+    </script>   
+</body>
+</html>
